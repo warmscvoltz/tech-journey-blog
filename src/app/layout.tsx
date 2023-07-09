@@ -14,7 +14,8 @@ const font = Inter({weight: '300', subsets: ['latin']})
 const title = 'Luke\'s Site';
 const description = 'This the Tech Journey template site';
 const links = [
-  {title: 'Pokemon', href: '/pokemon'}
+  {title: 'Pokemon', href: '/pokemon'},
+  {title: 'Rick and Morty', href: '/rick-and-morty'}
 ];
 const SocialLinks = {
   twitter: 'https://twitter.com/LukeDunscombe',

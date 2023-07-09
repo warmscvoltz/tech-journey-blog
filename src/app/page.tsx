@@ -15,22 +15,30 @@ export default function Home() {
 
   return (
       <div>
-        <section className={'prose'}>
-          <p>
-            Hello, I&apos;m <strong className={'font-black'}>Luke</strong>. I&apos;m a software engineer in love
+        <section>
+          <p className={'prose'}>
+            Hello, I&apos;m <b>Luke</b>. I&apos;m a software engineer in love
             with front end development. This is the starter template for Tech Journey!
           </p>
-          <p>
+          <div className={'my-4'}>
             <i>
-              Check out this starter repo{' '}
-              <Link href={'https://github.com/ludu12/tech-journey-blog'}>
-                here
-              </Link>
+              Check out the repo{' '}
+              <button className={'btn btn-primary'}>
+                <Link href={'https://github.com/ludu12/tech-journey-blog'}>
+                  <span className={'text-primary-content'}>
+                    here
+                  </span>
+                </Link>
+              </button>
             </i>
-          </p>
+          </div>
         </section>
-        <Image className={'rounded'} src={'https://source.unsplash.com/jJT1cnE4SZ8'} alt={'Mallorca'} width={600}
-               height={600}/>
+
+        <div className={'my-4'}>
+          <Image className={'rounded'} src={'https://source.unsplash.com/jJT1cnE4SZ8'} alt={'Mallorca'} width={500}
+                 height={500}/>
+        </div>
+
         <section className={'prose'}>
           <h2>Blog</h2>
           <ul>

@@ -13,8 +13,8 @@ const RickAndMortyCharacter: React.FC<RickAndMortyCharacterProps> = (props) => {
 
   return (
       <div className="card bg-neutral m-1 shadow w-[200px]">
-        <figure><Image width={192} height={192} src={character.image} alt={character.name}/></figure>
-        <div className="card-body overflow-hidden p-4">
+        <figure><Image width={200} height={200} src={character.image} alt={character.name}/></figure>
+        <div className="card-body overflow-hidden p-4 text-neutral-content">
           <h2 className="card-title truncate">{character.name}</h2>
           <div className={'flex items-center gap-1'}>
             <div className={clsx('bg-green-500 h-2 w-2 rounded-full', {'bg-red-500': character.status === 'Dead'})}/>

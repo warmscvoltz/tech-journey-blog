@@ -8,7 +8,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ socialLinks}) => {
   return (
-      <footer className="footer items-center p-4 bg-neutral text-neutral-content">
+      <footer className="footer glass items-center p-4">
         <div className="items-center grid-flow-col hidden md:flex">
           {/*<Avatar path={avatar}/>*/}
           {/*<p>Copyright © 2023 - All right reserved</p>*/}

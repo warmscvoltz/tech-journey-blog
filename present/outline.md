@@ -5,7 +5,7 @@ NextJS).
 
 HTML + CSS --- Javascript --- React (React DOM) --- NextJS
 
-**Outcomes**: Build a live, functioning web application! https://pokeapp-git-final-ludu.vercel.app/
+**Outcomes**: Build a live, functioning web blog! https://tech-journey-blog.vercel.app/
 
 1. Intro (name, career, family)
 2. What is a Web Site?

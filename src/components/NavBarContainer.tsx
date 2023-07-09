@@ -28,12 +28,12 @@ const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links
   return (
       <div className="flex-1 drawer">
         <input id="nav-drawer" type="checkbox" className="drawer-toggle"/>
-        <div className="drawer-content flex flex-col items-center">
-          <div className="w-full navbar bg-neutral text-neutral-content h-18">
+        <div className="drawer-content flex flex-col items-center pt-[4.25rem]">
+          <div className="w-full navbar glass fixed top-0 z-10 h-18">
             <div className="flex-none hidden lg:block w-12 h-12">
               <div className="avatar">
                 <div className="w-12 rounded-full">
-                  <Image alt={'Profile image'} src={profilePic} />
+                  <Image alt={'Profile image'} src={profilePic}/>
                 </div>
               </div>
             </div>

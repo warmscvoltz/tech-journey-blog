@@ -28,7 +28,7 @@ const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links
   return (
       <div className="flex-1 drawer">
         <input id="nav-drawer" type="checkbox" className="drawer-toggle"/>
-        <div className="drawer-content flex flex-col">
+        <div className="drawer-content flex flex-col items-center">
           <div className="w-full navbar bg-neutral text-neutral-content h-18">
             <div className="flex-none hidden lg:block w-12 h-12">
               <div className="avatar">
@@ -46,7 +46,7 @@ const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links
                 </svg>
               </label>
             </div>
-            <div className="flex-1 px-2 mx-2">
+            <div className="flex-1 px-2 mx-2 flex justify-between">
               <Link href="/"><h1 className={'text-4xl font-semibold'}>{title}</h1></Link>
             </div>
             <div className="flex-none hidden lg:block">

@@ -22,9 +22,9 @@ export default function Home() {
           <p>
             <i>
               Check out this starter repo{' '}
-              <a target='_blank' href='https://github.com/ludu12'>
+              <Link href={'https://github.com/ludu12/tech-journey-blog'}>
                 here
-              </a>
+              </Link>
             </i>
           </p>
         </section>

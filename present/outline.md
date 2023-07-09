@@ -17,7 +17,7 @@ HTML + CSS --- Javascript --- React (React DOM) --- NextJS
 4. Basics of React
    1. What is the DOM (document object model)?
    2. What is Babel?
-5. Pokeapp with NextJS
+5. Tech Journey with NextJS
    1. Plug in the components
    2. Update our hook logic
    3. Deploy with vercel

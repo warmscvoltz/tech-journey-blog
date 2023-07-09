@@ -15,10 +15,18 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/black.css" id="theme">
@@ -29,40 +37,38 @@
 
 
 <section>
-<section id="web-app-w-react-next.js" class="title-slide slide level1">
-<h1>Web App w/ React &amp; Next.js</h1>
+<section id="web-site-w-react-next.js" class="title-slide slide level1">
+<h1>Web Site w/ React &amp; Next.js</h1>
 
 </section>
 <section id="goals" class="slide level2">
 <h2>Goals 📝</h2>
 <ul>
-<li>Javascript + React</li>
+<li>HTML + Javascript + React</li>
 <li>Frameworks and other abstractions</li>
 <li>Building/deploying/developing</li>
-<li>How to think like a computer</li>
+<li>Make a creative site!</li>
+<li>Bonus: Web Sites vs Web Apps</li>
+<li>Bonus: How to think like a computer</li>
 </ul>
 </section>
-<section id="what-is-a-web-app" class="slide level2">
-<h2>What is a web app?</h2>
-</section>
-<section id="is-there-a-difference" class="slide level2">
-<h2>Is there a difference!</h2>
-<p>Website (e.g. Wikipedia)<br />
-<img src="images/wiki.png" alt="wiki" width="50"/></p>
-<p>vs Web Application (e.g. Facebook, Gmail)<br />
+<section id="what-is-a-web-site" class="slide level2">
+<h2>What is a web site?</h2>
+<p><img src="images/wiki.png" alt="wiki" width="50"/>
 <img src="images/facebook.png" alt="facebook" width="50"/>
 <img src="images/gmail.png" alt="gmail" width="50"/></p>
 </section>
 <section id="how-is-this-done" class="slide level2">
 <h2>How is this done?</h2>
-<p>Javascript makes your site dynamic!<br />
+<p>HTML is the code that renders your site! Javascript can your site
+dynamic!<br />
 And React is popular Javascript library.<br />
 <img src="images/js.png" alt="js" width="50"/>
 <img src="images/react.png" alt="react" width="50"/></p>
 </section>
-<section id="how-do-software-developers-you-create-web-applications"
+<section id="how-do-software-developers-you-create-web-sites"
 class="slide level2">
-<h2>How do software developers (you) create Web Applications?</h2>
+<h2>How do software developers (you) create Web Sites?</h2>
 </section>
 <section id="version-control" class="slide level2">
 <h2>Version Control</h2>
@@ -85,6 +91,7 @@ class="slide level2">
 <li>React, Next.js (libraries/frameworks)</li>
 <li><a href="https://beta.pokeapi.co/graphql/console/">PokeAPI</a></li>
 <li><a href="https://api.spacex.land/graphql/">SpaceX API</a></li>
+<li><a href="https://rickandmortyapi.com/">Rick and Morty API</a></li>
 </ul>
 </section>
 <section id="hosting" class="slide level2">
@@ -209,21 +216,28 @@ class="slide level2">
 </section>
 <section id="lets-deploy-1" class="slide level2">
 <h2>Let’s Deploy 🚀</h2>
+<div class="container">
+<div class="col">
 <ol type="1">
 <li>Fork</li>
 </ol>
-<pre><code>https://github.com/ludu12/pokeapp</code></pre>
-<ol start="2" type="1">
-<li>Go to Vercel and import the pokeapp repo</li>
+<pre><code>https://github.com/ludu12/tech-journey-blog</code></pre>
+<ol start="3" type="1">
+<li>Go to Vercel and import the tech-journey-blog repo</li>
 <li>Watch it deploy!</li>
 </ol>
+</div>
+<div class="col">
+<p><img src="images/import-vercel.png" alt="import-vercel" width="300"/></p>
+</div>
+</div>
 </section>
 <section id="lets-make-an-update" class="slide level2">
 <h2>Let’s make an update ⚒️</h2>
 <ol type="1">
 <li>Go to (using your github username):</li>
 </ol>
-<pre><code>gitpod.io/#https://github.com/{your-username}/pokeapp</code></pre>
+<pre><code>gitpod.io/#https://github.com/{your-username}/tech-journey-blog</code></pre>
 <ol start="2" type="1">
 <li>Make a change</li>
 <li>Commit and push!… watch it deploy</li>
@@ -233,29 +247,17 @@ class="slide level2">
 <section id="more-updates" class="slide level2">
 <h2>More updates!</h2>
 <ol type="1">
-<li>Go to <code>/pages/index.js</code></li>
-<li>Bring our home page to life!</li>
+<li>Go to <code>src/app/page.tsx</code></li>
+<li>Bring our home page to life and make it yours!</li>
 </ol>
 </section>
-<section id="we-have-broken-code" class="slide level2">
-<h2>We have broken code!</h2>
-<p><img src="images/kermit-worried.gif" alt="kermit" width="300"/></p>
-</section>
-<section id="lets-fix-it" class="slide level2">
-<h2>Let’s fix it</h2>
+<section id="other-ideas" class="slide level2">
+<h2>Other ideas!</h2>
 <ol type="1">
-<li>Go to <code>/lib/use-deck.js</code></li>
-<li><code>toggleHandler</code> is our problem!</li>
-<li>Optional: In terminal run <code>npm run test</code></li>
-</ol>
-</section>
-<section id="think-like-a-computer-algorithm" class="slide level2">
-<h2>Think like a computer (algorithm)</h2>
-<ol type="1">
-<li>Computers are fast, consistent idiots</li>
-<li>For things to work properly, we must think of all use cases</li>
-<li>We can also look in our toolbox for abstractions <a
-href="developer.mozilla.or">mdn</a></li>
+<li>Change font</li>
+<li>Change theme (implement Dark mode)</li>
+<li>Change profile image or add more images</li>
+<li>Add more posts</li>
 </ol>
 </section>
 <section id="thanks" class="slide level2">

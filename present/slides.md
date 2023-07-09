@@ -6,6 +6,8 @@
 - Frameworks and other abstractions
 - Building/deploying/developing
 - Make a creative site!
+- Bonus: Web Sites vs Web Apps
+- Bonus: How to think like a computer
 
 ## What is a web site?
 
@@ -170,21 +172,31 @@ Open source framework for building Web Apps
 
 ## Let's Deploy 🚀
 
-1. Fork
+::: {.container}
+:::: {.col}
+
+1. Fork 
 
 ```
-https://github.com/ludu12/pokeapp
+https://github.com/ludu12/tech-journey-blog
 ```
 
-2. Go to Vercel and import the pokeapp repo
+3. Go to Vercel and import the tech-journey-blog repo
 3. Watch it deploy!
+::::
+:::: {.col}
+
+<img src="images/import-vercel.png" alt="import-vercel" width="300"/>
+
+::::
+:::
 
 ## Let's make an update ⚒️
 
 1. Go to (using your github username):
 
 ```
-gitpod.io/#https://github.com/{your-username}/pokeapp
+gitpod.io/#https://github.com/{your-username}/tech-journey-blog
 ```  
 
 2. Make a change
@@ -192,28 +204,19 @@ gitpod.io/#https://github.com/{your-username}/pokeapp
 
 <img src="images/gitpod-popup.png" alt="popup" width="300"/>
 
-
 ## More updates!
 
-1. Go to `/pages/index.js`
-2. Bring our home page to life!
+1. Go to `src/app/page.tsx`
+2. Bring our home page to life and make it yours!
 
-## We have broken code! 
-
-<img src="images/kermit-worried.gif" alt="kermit" width="300"/>
-
-
-## Let's fix it
-1. Go to `/lib/use-deck.js`
-2. `toggleHandler` is our problem!
-3. Optional: In terminal run `npm run test`
-
-## Think like a computer (algorithm)
-1. Computers are fast, consistent idiots
-2. For things to work properly, we must think of all use cases
-3. We can also look in our toolbox for abstractions [mdn](https://developer.mozilla.org)
+## Other ideas!
+1. Change font
+2. Change theme (implement Dark mode)
+3. Change profile image or add more images
+4. Add more posts
 
 ## Thanks!
+
 <img src="images/pikachu.png" alt="pikachu"/>
 
 <style>

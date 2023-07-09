@@ -4,7 +4,6 @@ module.exports = {
         themes: [
             "light",
             "dark",
-            "cupcake",
             {
                 mytheme: {
                     "primary": "#a855f7",
@@ -32,6 +31,16 @@ module.exports = {
                 'gradient-conic':
                     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
+            keyframes: {
+                hop: {
+                    '0%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(3px)' },
+                    '100%': { transform: 'translateY(-3px)' },
+                },
+            },
+            animation: {
+                hop: 'hop 300ms infinite'
+            }
         },
     },
     plugins: [require("@tailwindcss/typography"), require("daisyui")],

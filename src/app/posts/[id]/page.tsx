@@ -1,12 +1,10 @@
 import Date from '@/components/Date'
 import {getPostData} from '@/lib/posts'
 
-type Params = {
-  id: string
-}
-
 type Props = {
-  params: Params
+  params: {
+    id: string
+  }
 }
 
 type PostData = {

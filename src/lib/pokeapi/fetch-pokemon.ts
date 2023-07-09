@@ -1,10 +1,45 @@
 import axios from 'axios';
-import { ApiUrl, Queries } from './queries';
+import {ApiUrl, Queries} from './queries';
 
 const TYPE_BADGE_URL = 'https://veekun.com/dex/media/types/en/';
 const SPRITE_URL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
 
-const mapper = (x: any) => {
+export type Pokemon = {
+  id: number,
+  genId: number,
+  name: string,
+  color: string,
+  backgroundColor: string;
+  sprite: string,
+  types: { name: string, typeBadgeUrl: string }[]
+}
+
+/*
+query colors {
+  pokemon_v2_pokemoncolor {
+    name
+  }
+}
+ */
+const colors: Record<string, [number, number, number]> = {
+  black: [0, 0, 0],
+  blue: [0, 0, 255],
+  brown: [165, 42, 42],
+  gray: [128, 128, 128],
+  green: [0, 255, 0],
+  pink: [255, 192, 203],
+  purple: [128, 0, 128],
+  red: [255, 0, 0],
+  white: [255, 255, 255],
+  yellow: [255, 255, 0]
+};
+
+export const colorToRGBA = (color: string, opacity: number) => {
+  return `rgba(${colors[color].join(',')}, ${opacity})`;
+};
+
+
+const mapper = (x: any): Pokemon => {
   // Don't care about alola...
   const pokemon = x.pokemon_v2_pokemons[0];
   return {
@@ -12,6 +47,7 @@ const mapper = (x: any) => {
     genId: x.generation_id,
     name: pokemon.name,
     color: x.pokemon_v2_pokemoncolor.name,
+    backgroundColor: colorToRGBA(x.pokemon_v2_pokemoncolor.name, 0.2),
     types: pokemon.pokemon_v2_pokemontypes?.map((t: any) => {
       const name = t.pokemon_v2_type.name;
       return {
@@ -23,22 +59,22 @@ const mapper = (x: any) => {
   };
 };
 
-export async function fetchPokemonByGen(genId: number[] | number) {
+export async function fetchPokemonByGen(genId: number[] | number): Promise<{ generation: number[] | null, errors: any[], pokemon: Pokemon[] }> {
   const generation = Array.isArray(genId) ? genId : [genId]
   try {
     const response = await axios.post(
-      ApiUrl,
-      {
-        query: Queries.fetchPokemonByGen,
-        variables: {
-          gen_ids: generation
+        ApiUrl,
+        {
+          query: Queries.fetchPokemonByGen,
+          variables: {
+            gen_ids: generation
+          }
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
         }
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
     );
 
     return {
@@ -48,25 +84,25 @@ export async function fetchPokemonByGen(genId: number[] | number) {
     };
   } catch (e) {
     console.error(e);
-    return { errors: [e], pokemon: [], generation: null };
+    return {errors: [e], pokemon: [], generation: null};
   }
 }
 
 export async function fetchPokemonByIds(id: string[] | string) {
   try {
     const response = await axios.post(
-      ApiUrl,
-      {
-        query: Queries.fetchPokemonById,
-        variables: {
-          ids: Array.isArray(id) ? id : [id]
+        ApiUrl,
+        {
+          query: Queries.fetchPokemonById,
+          variables: {
+            ids: Array.isArray(id) ? id : [id]
+          }
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
         }
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
     );
 
     return {
@@ -75,6 +111,6 @@ export async function fetchPokemonByIds(id: string[] | string) {
     };
   } catch (e) {
     console.error(e);
-    return { errors: [e], pokemon: [] };
+    return {errors: [e], pokemon: []};
   }
 }

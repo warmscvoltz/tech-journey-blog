@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ApiUrl, Queries } from './queries';
 
-export async function fetchGenerations() {
+export async function fetchGenerations(): Promise<{ generations: { id: number}[], errors: any[] }> {
   try {
     const response = await axios.post(
       ApiUrl,

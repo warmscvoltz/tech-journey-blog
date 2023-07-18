@@ -2,8 +2,7 @@
 module.exports = {
     daisyui: {
         themes: [
-            "light",
-            "dark",
+            "forest",
             {
                 "mytheme": {
                     "primary": "#a991f7",

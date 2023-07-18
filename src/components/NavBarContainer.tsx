@@ -3,6 +3,7 @@ import Link from "next/link";
 import type {UrlObject} from "url";
 import Image from "next/image";
 import profilePic from '../../public/images/avatar.jpeg'
+import DarkModeButton from "@/components/DarkModeButton";
 
 interface NavBarContainerProps {
   children: React.ReactNode;
@@ -49,6 +50,8 @@ const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links
             <div className="flex-1 px-2 mx-2 flex justify-between">
               <Link href="/"><h1 className={'text-4xl font-semibold'}>{title}</h1></Link>
             </div>
+            {/* uncomment me! */}
+            {/*<DarkModeButton/>*/}
             <div className="flex-none hidden lg:block">
               <ul className="menu menu-horizontal">
                 {renderLinks()}

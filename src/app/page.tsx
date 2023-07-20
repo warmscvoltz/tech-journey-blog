@@ -21,7 +21,7 @@ export default function Home() {
       <div>
         <section>
           <p className={'prose'}>
-            Hey I'm Robert. This is my site.
+            Hey I&apos;m Robert. This is my site.
           </p>
           <div className={'my-4'}>
             <i>

@@ -30,7 +30,7 @@ These are the valid options that our site knows about, it takes the first one by
 
 Add a toggle for Dark mode
 - Add `light` and `dark` to your theme list.
-- Go to `src/componentsNavBarContainer.tsx`
+- Go to `src/components/NavBarContainer.tsx`
 
 Change:
 

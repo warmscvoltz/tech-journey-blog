@@ -45,7 +45,7 @@ export default function Home() {
         <section className={'prose'}>
           <h2>Blog</h2>
           <ul>
-            {allPostsData.slice(0,1).map(({id, date, title}) => (
+            {allPostsData.map(({id, date, title}) => (
                 <li key={id}>
                   <div>
                     <Link href={`/posts/${id}`}>{title}</Link>

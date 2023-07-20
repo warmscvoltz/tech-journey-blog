@@ -10,5 +10,6 @@ I thought it was going to be ok this morning, but over time it keeps getting hot
 
 It's due to these ungrateful kids.
 
+![bronco](/images/bronco.jpeg)
 
 PS: I know there are grammer issues. Don't look at them. Just ignore. Go back to your pineapple.

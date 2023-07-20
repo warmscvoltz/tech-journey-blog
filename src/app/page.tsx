@@ -26,13 +26,13 @@ export default function Home() {
           <div className={'my-4'}>
             <i>
               Check out the repo{' '}
-              <button className={'btn btn-primary'}>
                 <Link href={'https://www.google.com/'}>
-                  <span className={'text-primary-content'}>
-                    here
-                  </span>
+                  <button className={'btn btn-primary'}>
+                      <span className={'text-primary-content'}>
+                        here
+                      </span>
+                  </button>
                 </Link>
-              </button>
             </i>
           </div>
         </section>

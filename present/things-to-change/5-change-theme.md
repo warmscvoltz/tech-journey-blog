@@ -23,7 +23,7 @@ This is the block of code:
 
 These are the valid options that our site knows about, it takes the first one by default.
 - Try changing the `forest` string to one from [daisyui](https://daisyui.com/docs/themes/)
-- Or try removing the `forest` string and creating your own. 
+- Or try removing the `forest` string and creating your own.
 - ORRRRRRRRRR......
 
 ### Create Dark Mode
@@ -39,11 +39,11 @@ Change:
 {/*<DarkModeButton/>*/}
 ```
 
-to 
+to
 
 ```jsx
 <DarkModeButton/>
 ```
 
-BONUS: `light` and `dark` are just strings here for the name of the default theme. 
+BONUS: `light` and `dark` are just strings here for the name of the default theme.
 Could we create our own "dark" and "light" themes?

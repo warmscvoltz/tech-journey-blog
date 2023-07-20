@@ -4,7 +4,6 @@ import {Inter} from 'next/font/google'
 import NavBarContainer from "@/components/NavBarContainer";
 import Footer from "@/components/Footer";
 
-
 /*
 TODO:  Change these things along with:
   - avatar.jpeg in /public/images
@@ -18,10 +17,10 @@ const links = [
   {title: 'Rick and Morty', href: '/rick-and-morty'}
 ];
 const SocialLinks = {
-  twitter: 'https://twitter.com/LukeDunscombe',
-  github: 'https://github.com/ludu12',
-  instagram: 'https://www.linkedin.com/in/luke-dunscombe-b9712a8b',
-  email: 'mailto:luke@ludu.io'
+  twitter: '#twitter',
+  github: '#github',
+  instagram: '#insta',
+  email: 'mailto:your-email@gmail.com'
 }
 
 export const metadata: Metadata = {

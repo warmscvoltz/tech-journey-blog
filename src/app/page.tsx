@@ -10,6 +10,10 @@ type AllPostsData = {
   id: string
 }[]
 
+// Change this url to change the image!
+const imageUrl = 'https://unsplash.com/photos/P_nM4HIeX8Y';
+const imageKey = imageUrl.split('/').at(-1);
+
 export default function Home() {
   const allPostsData: AllPostsData = getSortedPostsData()
 
@@ -35,7 +39,7 @@ export default function Home() {
         </section>
 
         <div className={'my-4'}>
-          <Image className={'rounded'} src={'https://source.unsplash.com/jJT1cnE4SZ8'} alt={'Mallorca'} width={500}
+          <Image className={'rounded'} src={`https://source.unsplash.com/${imageKey}`} alt={'My Image'} width={500}
                  height={500}/>
         </div>
 

@@ -2,13 +2,13 @@ import React from 'react';
 import Link from "next/link";
 import type {UrlObject} from "url";
 import Image from "next/image";
-import profilePic from '../../public/images/avatar.jpeg'
+import profilePic from '../../public/images/avatar.jpg'
 import DarkModeButton from "@/components/DarkModeButton";
 
 interface NavBarContainerProps {
   children: React.ReactNode;
   title: string;
-  links: {
+  links?: {
     href: (string | UrlObject);
     title: string
   }[]
@@ -17,7 +17,7 @@ interface NavBarContainerProps {
 const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links}) => {
 
   function renderLinks() {
-    return links.map((l, i) => {
+    return links?.map((l, i) => {
       return (
           <li key={i}>
             <Link href={l.href}>{l.title}</Link>
@@ -33,7 +33,7 @@ const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links
           <div className="w-full navbar glass fixed top-0 z-10 h-18">
             <div className="flex-none hidden lg:block w-12 h-12">
               <div className="avatar">
-                <div className="w-12 rounded-full">
+                <div className="w-12 rounded-full border border-primary border-2">
                   <Image alt={'Profile image'} src={profilePic}/>
                 </div>
               </div>
@@ -52,20 +52,20 @@ const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links
             </div>
             {/* uncomment me! */}
             {/*<DarkModeButton/>*/}
-            <div className="flex-none hidden lg:block">
-              <ul className="menu menu-horizontal">
-                {renderLinks()}
-              </ul>
-            </div>
+            {links && <div className="flex-none hidden lg:block">
+                <ul className="menu menu-horizontal">
+                  {renderLinks()}
+                </ul>
+            </div>}
           </div>
           {children}
         </div>
-        <div className="drawer-side">
-          <label htmlFor="nav-drawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 h-full bg-base-200">
-            {renderLinks()}
-          </ul>
-        </div>
+        {links && <div className="drawer-side">
+            <label htmlFor="nav-drawer" className="drawer-overlay"></label>
+            <ul className="menu p-4 pt-20 w-80 h-full bg-base-200">
+              {renderLinks()}
+            </ul>
+        </div>}
       </div>
   );
 };

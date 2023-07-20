@@ -7,7 +7,10 @@ interface DarkModeButtonProps {
 }
 
 const DarkModeButton: React.FC<DarkModeButtonProps> = () => {
-  const currentTheme = localStorage?.getItem('theme');
+  let currentTheme;
+  if (typeof window !== 'undefined') {
+    currentTheme = localStorage?.getItem('theme');
+  }
 
   useLayoutEffect(() => {
     themeChange(false)

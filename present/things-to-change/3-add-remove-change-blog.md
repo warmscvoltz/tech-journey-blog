@@ -14,4 +14,4 @@ date: '2023-07-01'
 ```
 
 ## Bonus Challenge: 
-How might we embed an image into our post? A video maybe?
+How might we embed an image into our post?

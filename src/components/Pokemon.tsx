@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 import {Pokemon as PokemonType} from '@/lib/pokeapi'
 
 interface PokemonProps {

@@ -33,7 +33,7 @@ const NavBarContainer: React.FC<NavBarContainerProps> = ({title, children, links
           <div className="w-full navbar glass fixed top-0 z-10 h-18">
             <div className="flex-none hidden lg:block w-12 h-12">
               <div className="avatar">
-                <div className="w-12 rounded-full border border-primary border-2">
+                <div className="w-12 rounded-full border-primary border-2">
                   <Image alt={'Profile image'} src={profilePic}/>
                 </div>
               </div>

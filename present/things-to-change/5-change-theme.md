@@ -1,4 +1,4 @@
-### In `tailwind.config.js` change the theme string or make your own!
+# In `tailwind.config.js` change the theme string or make your own!
 
 
 This is the block of code:  
@@ -45,5 +45,6 @@ to
 <DarkModeButton/>
 ```
 
-BONUS: `light` and `dark` are just strings here for the name of the default theme.
+### Bonus Challenge: 
+`light` and `dark` are just presets here (like `forest` was) for the name of the default theme.
 Could we create our own "dark" and "light" themes?

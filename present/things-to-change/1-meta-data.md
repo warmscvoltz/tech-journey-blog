@@ -1,4 +1,4 @@
-### Change meta data in `src/app/layout.tsx`
+# Change meta data in `src/app/layout.tsx`
 
 Find this block of code and change things.
 
@@ -24,3 +24,7 @@ const SocialLinks = {
 ```
 
 In the `/public` folder you can change the avatar image and favicon.
+
+### Bonus Challenge: 
+The links section assumes we want to link a page that already exists on our own site. What if we want to link to a different site?
+What if we want to make a new page entirely?

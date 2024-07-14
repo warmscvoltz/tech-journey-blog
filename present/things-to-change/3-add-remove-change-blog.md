@@ -1,4 +1,4 @@
-### In `/posts` simply add/remove or change files in this folder!
+# In `/posts` simply add/remove or change files in this folder!
 
 Whatever the name of the file is, becomes the link:
 
@@ -13,3 +13,5 @@ date: '2023-07-01'
 ---
 ```
 
+## Bonus Challenge: 
+How might we embed an image into our post? A video maybe?

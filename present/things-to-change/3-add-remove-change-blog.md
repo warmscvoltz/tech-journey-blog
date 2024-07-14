@@ -1,10 +1,10 @@
 ### In `/posts` simply add/remove or change files in this folder!
 
-Whatever the name of the file is is the link:
+Whatever the name of the file is, becomes the link:
 
 `/posts/{your-file-name-here}`
 
-Be sure to have this at the top for the tile
+Be sure to have this at the top for the title
 
 ```markdown
 ---

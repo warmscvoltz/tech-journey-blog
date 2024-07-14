@@ -7,6 +7,6 @@ Go back to this block of code and change the font.
 import {Inter} from 'next/font/google' // Change this
 
 ...
-const font = Inter({subsets: ['latin']}); // And this
+const font = Inter({ weight: 'variable', subsets: ['latin']}); // And this
 ...
 ```

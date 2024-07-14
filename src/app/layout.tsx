@@ -1,6 +1,6 @@
 import './globals.css'
 import type {Metadata} from 'next'
-import {Source_Code_Pro} from 'next/font/google'
+import {Inter} from 'next/font/google';
 import NavBarContainer from "@/components/NavBarContainer";
 import Footer from "@/components/Footer";
 
@@ -9,8 +9,8 @@ TODO:  Change these things along with:
   - avatar.jpeg in /public/images
   - favicon.ico in /public
  */
-const font = Source_Code_Pro({ weight: 'variable', subsets: ['latin']})
-const title = 'Robert\'s Site';
+const font = Inter({ weight: 'variable', subsets: ['latin']})
+const title = 'Luke\'s Site';
 const description = 'This my personal site';
 const links = [
   {title: 'Pokemon', href: '/pokemon'},

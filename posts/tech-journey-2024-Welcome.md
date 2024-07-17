@@ -21,3 +21,4 @@ What is your name, your favorite pokemon, and something cool about you?
 - Aden, Gyarados, been going to this really cool tech camp this week.
 - Suvan, Slowbro, I am cold right now.
 - Jessa, squirtle, 3 day running trail fest.
+- Joey, pikachu, run cross country.

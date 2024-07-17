@@ -10,11 +10,11 @@ TODO:  Change these things along with:
   - favicon.ico in /public
  */
 const font = Inter({ weight: 'variable', subsets: ['latin']})
-const title = 'Luke\'s Site';
+const title = 'Luke\'s webSite';
 const description = 'This my personal site';
 const links = [
-  {title: 'Pokemon', href: '/pokemon'},
-  {title: 'Rick and Morty', href: '/rick-and-morty'}
+  {title: 'Heated vids💋', href: 'https://www.youtube.com/shorts/VTqNzCmFwn8'},
+  {title: 'Leaks no lookie👀🤢💕💕❤💋', href: 'https://lukes-secrets.vercel.app/movie/9c771871-a285-481f-828d-967323742366'}
 ];
 const SocialLinks = {
   twitter: '#twitter',

@@ -10,11 +10,11 @@ This is the block of code:
         "forest",
         {
             "mytheme": {
-                "primary": "#a991f7",
-                "secondary": "#f6d860",
-                "accent": "#37cdbe",
+                "primary": "#a891f7",
+                "secondary": "#f2d860",
+                "accent": "#27cdbe",
                 "neutral": "#3d4451",
-                "base-100": "#ffffff",
+                "base-100": "#3d4451",
             },
         },
     ],

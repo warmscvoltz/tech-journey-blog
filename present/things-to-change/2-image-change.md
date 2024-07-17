@@ -8,9 +8,9 @@ Change the src link here to something fun.
 - Change the imageUrl
 ```jsx
 // Change this url to change the image!
-const imageUrl = '/images/snorlax.jpg';
+const imageUrl = '/images/is it in.PNG';
 // to
-const imageUrl = '/images/{name-of-file}';
+const imageUrl = '/images/is it in.PNG';
 ```
 
 ## Bonus Challenge: 
